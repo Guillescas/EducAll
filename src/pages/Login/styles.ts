@@ -1,40 +1,30 @@
 import styled from "styled-components";
 
+import { lighten } from "polished";
+import background from "../../assets/background-big.svg";
+
 export const Container = styled.div`
   height: 100vh;
 
   display: flex;
   align-items: stretch;
+  justify-content: center;
+
+  background: url(${background}) no-repeat;
+  background-size: cover;
 `;
 
-export const Content = styled.div`
+export const Presentation = styled.div`
   display: flex;
   flex: 1;
-  flex-direction: column;
-  align-items: center;
-
-  place-content: center;
-
-  width: 700px;
-`;
-
-export const Background = styled.div`
-  img {
-    width: 300px;
-  }
-`;
-
-export const IntroCard = styled.div`
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   height: 100vh;
-  width: 750px;
+  /* background: #b6b0f7; */
 
   h1 {
-    margin-top: -120px;
     margin-bottom: 24px;
   }
 
@@ -42,16 +32,50 @@ export const IntroCard = styled.div`
     max-width: 450px;
     text-align: center;
   }
+
+  img {
+    width: 450px;
+  }
 `;
 
-export const LoginCard = styled.div`
-  width: 380px;
-  height: 450px;
-  background-color: #3f3d56;
-  color: #f0f0f5;
-  border-radius: 8px;
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  h1 {
-    text-align: center;
+  place-content: center;
+
+  width: 700px;
+
+  form {
+    width: 420px;
+
+    color: #3f3d56;
+    border-radius: 8px;
+
+    h1 {
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    input {
+      height: 100%;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    color: #3f3d56;
+    transition: color 0.2s;
+
+    svg {
+      margin-right: 16px;
+    }
+
+    &:hover {
+      color: ${lighten(0.2, "#3f3d56")};
+    }
   }
 `;
