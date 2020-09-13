@@ -26,11 +26,18 @@ export const Presentation = styled.div`
 
   h1 {
     margin-bottom: 24px;
+    text-align: center;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   p {
     max-width: 450px;
     text-align: center;
+    margin-bottom: 32px;
   }
 
   img {
@@ -55,7 +62,7 @@ export const Content = styled.div`
 
     h1 {
       margin-bottom: 16px;
-      text-align: left;
+      text-align: center;
     }
 
     input {
