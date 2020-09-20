@@ -4,6 +4,7 @@ import { Form } from "@unform/web";
 import { FiMail, FiLock, FiLogIn } from "react-icons/fi";
 import * as Yup from "yup";
 
+import { Link } from "react-router-dom";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 
@@ -65,10 +66,10 @@ const Login: React.FC = () => {
           <Button>Entrar</Button>
         </Form>
 
-        <a href="login">
+        <Link to={{ pathname: "/signup" }}>
           <FiLogIn />
           Criar conta
-        </a>
+        </Link>
       </Content>
     </Container>
   );
