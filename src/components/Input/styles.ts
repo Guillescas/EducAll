@@ -23,7 +23,7 @@ export const Container = styled.div`
     border: 0;
     border-radius: 8px;
     flex: 1;
-    height: 200px;
+    height: 32px;
   }
 
   svg {
